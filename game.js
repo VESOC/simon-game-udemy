@@ -39,13 +39,15 @@ function playSound(name) {
   audio.play();
 }
 
-$("body").on("tapstart",function(){
+$("body").ontapstart = touchfunction();
+
+function touchfunction() {
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
     animatePress(userChosenColor);
     playSound(userChosenColor);
     checkAnswer(userClickedPattern.length-1);
-});
+}
 
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
