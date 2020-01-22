@@ -39,7 +39,7 @@ function playSound(name) {
   audio.play();
 }
 
-$("body").ontapstart = touchfunction();
+$("body").ontouchstart = touchfunction();
 
 function touchfunction() {
     var userChosenColor = $(this).attr("id");
