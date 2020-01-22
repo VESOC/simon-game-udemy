@@ -39,14 +39,16 @@ function playSound(name) {
   audio.play();
 }
 
-$(document).on("touchstart", function() {
-    if(!started){
-      $("#level-title").text("Level " + level);
-      setTimeout(function () {
-        nextSequence();
-      }, 500);
-      started = true;
-});
+if (!is_touch_device()) {
+  $(document).on("touchstart", function() {
+         if(!started){
+           $("#level-title").text("Level " + level);
+           setTimeout(function () {
+             nextSequence();
+           }, 500);
+           started = true;
+     });
+}
 
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
