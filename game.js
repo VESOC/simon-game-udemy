@@ -39,7 +39,7 @@ function playSound(name) {
   audio.play();
 }
 
-$("body").on("tap",function(){
+$("body").on("tapstart",function(){
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
     animatePress(userChosenColor);
