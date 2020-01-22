@@ -39,7 +39,7 @@ function playSound(name) {
   audio.play();
 }
 
-$(document).ontouchstart = touchfunction;
+$(document).ontouchend = touchfunction;
 
 function touchfunction() {
     if(!started){
