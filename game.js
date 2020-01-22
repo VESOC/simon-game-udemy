@@ -43,16 +43,16 @@ function checkTouchDevice() {
    return 'ontouchstart' in document.documentElement;
 }
 
-if (!checkTouchDevice()) {
-  $(document).on("touchstart", function() {
-         if(!started){
-           $("#level-title").text("Level " + level);
-           setTimeout(function () {
-             nextSequence();
-           }, 500);
-           started = true;
-     });
-}
+// if (!checkTouchDevice()) {
+//   $(document).on("touchstart", function() {
+//          if(!started){
+//            $("#level-title").text("Level " + level);
+//            setTimeout(function () {
+//              nextSequence();
+//            }, 500);
+//            started = true;
+//      });
+// }
 
 // if ("ontouchstart" in document.documentElement)
 // {
