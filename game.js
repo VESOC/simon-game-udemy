@@ -39,14 +39,15 @@ function playSound(name) {
   audio.play();
 }
 
-$("body").ontouchstart = touchfunction();
+$(document).ontouchstart = touchfunction();
 
 function touchfunction() {
-    var userChosenColor = $(this).attr("id");
-    userClickedPattern.push(userChosenColor);
-    animatePress(userChosenColor);
-    playSound(userChosenColor);
-    checkAnswer(userClickedPattern.length-1);
+    if(!started){
+      $("#level-title").text("Level " + level);
+      setTimeout(function () {
+        nextSequence();
+      }, 500);
+      started = true;
 }
 
 function animatePress(currentColor) {
