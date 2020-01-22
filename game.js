@@ -39,7 +39,11 @@ function playSound(name) {
   audio.play();
 }
 
-if (!is_touch_device()) {
+function checkTouchDevice() {
+   return 'ontouchstart' in document.documentElement;
+}
+
+if (!checkTouchDevice()) {
   $(document).on("touchstart", function() {
          if(!started){
            $("#level-title").text("Level " + level);
@@ -49,6 +53,19 @@ if (!is_touch_device()) {
            started = true;
      });
 }
+
+// if ("ontouchstart" in document.documentElement)
+// {
+//   $(document).on("touchstart", function() {
+//       if(!started){
+//         $("#level-title").text("Level " + level);
+//         setTimeout(function () {
+//           nextSequence();
+//         }, 500);
+//         started = true;
+//   });
+// }
+
 
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
@@ -62,7 +79,6 @@ function checkAnswer(userClick) {
   if(userClickedPattern[userClick] === gamePattern[userClick]){
     if(userClickedPattern.length === gamePattern.length){
       setTimeout(function() {
-
         nextSequence();
       }, 1000);
     }
