@@ -39,16 +39,14 @@ function playSound(name) {
   audio.play();
 }
 
-$(document).ontouchend = touchfunction;
-
-function touchfunction() {
+$(document).on("touchstart", touchfunction() {
     if(!started){
       $("#level-title").text("Level " + level);
       setTimeout(function () {
         nextSequence();
       }, 500);
       started = true;
-}
+});
 
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
