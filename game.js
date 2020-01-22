@@ -39,11 +39,11 @@ function playSound(name) {
   audio.play();
 }
 
-//function checkTouchDevice() {
-//   return 'ontouchstart' in document.documentElement;
-//}
+// function checkTouchDevice() {
+//    return 'ontouchstart' in document.documentElement;
+// }
 
-// if (!checkTouchDevice()) {
+// if (checkTouchDevice()) {
 //   $(document).on("touchstart", function() {
 //          if(!started){
 //            $("#level-title").text("Level " + level);
@@ -52,6 +52,14 @@ function playSound(name) {
 //            }, 500);
 //            started = true;
 //      });
+// }else{
+//     if(!started){
+//       $("#level-title").text("Level " + level);
+//       setTimeout(function () {
+//         nextSequence();
+//       }, 500);
+//       started = true;
+//     }
 // }
 
 // if ("ontouchstart" in document.documentElement)
