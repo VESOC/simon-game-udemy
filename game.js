@@ -39,14 +39,12 @@ function playSound(name) {
   audio.play();
 }
 
-$(document).on("pagecreate","#page1",function(){
-  $("body").on("tap",function(){
+$("body").on("tap",function(){
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
     animatePress(userChosenColor);
     playSound(userChosenColor);
     checkAnswer(userClickedPattern.length-1);
-  });
 });
 
 function animatePress(currentColor) {
