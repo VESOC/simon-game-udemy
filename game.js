@@ -39,9 +39,9 @@ function playSound(name) {
   audio.play();
 }
 
-function checkTouchDevice() {
-   return 'ontouchstart' in document.documentElement;
-}
+//function checkTouchDevice() {
+//   return 'ontouchstart' in document.documentElement;
+//}
 
 // if (!checkTouchDevice()) {
 //   $(document).on("touchstart", function() {
