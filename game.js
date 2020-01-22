@@ -39,7 +39,7 @@ function playSound(name) {
   audio.play();
 }
 
-$(document).on("touchstart", touchfunction() {
+$(document).on("touchstart", function() {
     if(!started){
       $("#level-title").text("Level " + level);
       setTimeout(function () {
