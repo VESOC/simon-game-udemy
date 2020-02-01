@@ -17,6 +17,17 @@ body {
 
 }
 
+.start-button {
+	align: center;
+	border-color: black;
+	background: gray;
+	text-color: white;
+	border-radius: 10px;
+	height: 10%;
+	width: 10%;
+	margin: 5%;
+}
+
 .btn {
   margin: 25px;
   display: inline-block;

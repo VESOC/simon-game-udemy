@@ -5,13 +5,6 @@ var level = 1;
 var started = false;
 
 $(".btn").click(function() {
-	if(!started){
-    $("#level-title").text("Level " + level);
-    setTimeout(function () {
-      nextSequence();
-    }, 500);
-    started = true;
-  }
   var userChosenColor = $(this).attr("id");
   userClickedPattern.push(userChosenColor);
   animatePress(userChosenColor);
@@ -19,6 +12,16 @@ $(".btn").click(function() {
   checkAnswer(userClickedPattern.length-1);
 });
 
+$(".start-button").click(function() {
+	if(!started){
+    $("#level-title").text("Level " + level);
+    setTimeout(function () {
+      nextSequence();
+    }, 500);
+    started = true;
+		$(".start-button").hide();
+  }
+});
 
 $(document).keypress(function() {
   if(!started){
@@ -45,42 +48,6 @@ function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
 }
-
-// function checkTouchDevice() {
-//    return 'ontouchstart' in document.documentElement;
-// }
-
-// if (checkTouchDevice()) {
-//   $(document).on("touchstart", function() {
-//          if(!started){
-//            $("#level-title").text("Level " + level);
-//            setTimeout(function () {
-//              nextSequence();
-//            }, 500);
-//            started = true;
-//      });
-// }else{
-//     if(!started){
-//       $("#level-title").text("Level " + level);
-//       setTimeout(function () {
-//         nextSequence();
-//       }, 500);
-//       started = true;
-//     }
-// }
-
-// if ("ontouchstart" in document.documentElement)
-// {
-//   $(document).on("touchstart", function() {
-//       if(!started){
-//         $("#level-title").text("Level " + level);
-//         setTimeout(function () {
-//           nextSequence();
-//         }, 500);
-//         started = true;
-//   });
-// }
-
 
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed");
