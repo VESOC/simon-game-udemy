@@ -78,4 +78,5 @@ function startOver(){
   started = false;
   level = 1;
   gamePattern = [];
+	$(".start-button").show();
 }
