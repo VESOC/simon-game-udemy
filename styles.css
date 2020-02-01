@@ -19,7 +19,7 @@ body {
 
 .start-button {
 	align-self: center;
-	background: black;
+	background-color: black;
 	color: white;
 	height: 75px;
 	width: 200px;
