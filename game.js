@@ -14,9 +14,7 @@ $(".btn").click(function() {
 
 $(document.querySelector("button")).click(function() {
 	if(!started){
-    setTimeout(function () {
-      nextSequence();
-    }, 500);
+    nextSequence();
     started = true;
 		$(".start-button").hide();
   }
@@ -24,9 +22,7 @@ $(document.querySelector("button")).click(function() {
 
 $(document).keypress(function() {
   if(!started){
-    setTimeout(function () {
-      nextSequence();
-    }, 500);
+    nextSequence();
     started = true;
   }
 });
