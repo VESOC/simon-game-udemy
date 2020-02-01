@@ -19,13 +19,13 @@ body {
 
 .start-button {
 	align-self: center;
-	background: gray;
+	background: black;
 	color: white;
 	height: 75px;
 	width: 200px;
 	margin-bottom: 5%;
 	cursor: pointer;
-	font-size: 12px;
+	font-size: 20px;
 	border: none;
 	border-radius: 5px;
 }
