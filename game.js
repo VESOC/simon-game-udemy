@@ -24,6 +24,7 @@ $(document).keypress(function() {
   if(!started){
     nextSequence();
     started = true;
+		$(".start-button").hide();
   }
 });
 
