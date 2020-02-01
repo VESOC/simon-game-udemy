@@ -4,6 +4,13 @@ var userClickedPattern = [];
 var level = 1;
 
 $(".btn").click(function() {
+	if(!started){
+    $("#level-title").text("Level " + level);
+    setTimeout(function () {
+      nextSequence();
+    }, 500);
+    started = true;
+  }
   var userChosenColor = $(this).attr("id");
   userClickedPattern.push(userChosenColor);
   animatePress(userChosenColor);
