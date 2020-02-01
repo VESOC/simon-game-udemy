@@ -12,9 +12,8 @@ $(".btn").click(function() {
   checkAnswer(userClickedPattern.length-1);
 });
 
-$(".start-button").click(function() {
+$(document.querySelector("button")).click(function() {
 	if(!started){
-    $("#level-title").text("Level " + level);
     setTimeout(function () {
       nextSequence();
     }, 500);
@@ -25,7 +24,6 @@ $(".start-button").click(function() {
 
 $(document).keypress(function() {
   if(!started){
-    $("#level-title").text("Level " + level);
     setTimeout(function () {
       nextSequence();
     }, 500);
@@ -40,8 +38,8 @@ function nextSequence() {
   var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColor = buttonColors[randomNumber];
   gamePattern.push(randomChosenColor);
+	playSound(randomChosenColor);
   $("#" + randomChosenColor).fadeOut(250).fadeIn(250);
-  playSound(randomChosenColor);
 }
 
 function playSound(name) {
@@ -66,6 +64,7 @@ function checkAnswer(userClick) {
     }
   }else{
     var wrongA = new Audio("sounds/wrong.mp3");
+		wrongA.play();
     $("body").addClass("game-over");
     setTimeout(function () {
       $("body").removeClass("game-over");
