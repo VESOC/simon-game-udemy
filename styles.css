@@ -6,7 +6,7 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin: 5% 5% 1%;
+  margin: 5% 5% 2%;
   color: #FEF2BF;
 }
 
@@ -19,10 +19,10 @@ body {
 
 .start-button {
 	align-self: center;
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: gray;
 	height: 75px;
-	width: 200px;
+	width: 350px;
 	margin-bottom: 5%;
 	cursor: pointer;
 	font-size: 20px;
