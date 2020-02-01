@@ -22,10 +22,10 @@ body {
 	border-color: black;
 	background: gray;
 	text-color: white;
-	border-radius: 10px;
-	height: 10%;
-	width: 10%;
-	margin: 5%;
+	border: 5px solid;
+	border-radius: 50%;
+	height: 50px;
+	width: 100px;
 }
 
 .btn {
