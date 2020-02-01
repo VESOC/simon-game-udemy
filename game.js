@@ -12,7 +12,7 @@ $(".btn").click(function() {
   checkAnswer(userClickedPattern.length-1);
 });
 
-$(document.querySelector("button")).click(function() {
+$(".start-button").click(function() {
 	if(!started){
     nextSequence();
     started = true;
